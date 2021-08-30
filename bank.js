@@ -22,4 +22,28 @@ addDiposit.addEventListener("click",function(){
     console.log(addOver+dipositNumber);
 })
 //for balance
-var addammount
+var addammount = document.getElementById('addDeposit');
+    addammount.addEventListener('click',function(){
+    let dipositAmmount = document.getElementById('dipositAmmount').value;
+    let dipositNumber = parseFloat(dipositAmmount);
+    let add = document.getElementById('add1').innerHTML;
+    let addAmount = parseFloat(add);
+    total = dipositNumber + addAmount;
+    document.getElementById('add1').innerHTML = total;
+})
+
+var withdraw = document.getElementById('subWithdraw');
+withdraw.addEventListener('click', function(){
+    let WithDrawInput = document.getElementById('withdrawAmmount').value;
+    let WithDrawInputNumber = parseFloat(WithDrawInput);
+    // console.log(WithDrawInputNumber);
+    let sub = document.getElementById('add1').innerHTML;
+    let subAll = parseFloat(sub);
+    let total =  subAll - WithDrawInputNumber; 
+    document.getElementById('add1').innerHTML = total;
+    let myWithdraw = document.getElementById('add2').innerHTML;
+    let myWithdrawNumber = parseFloat(myWithdraw);
+    let total2 = WithDrawInputNumber + myWithdrawNumber;
+    document.getElementById('add2').innerHTML =total2;
+
+})
